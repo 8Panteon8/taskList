@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <title>Todo List</title>
+</head>
+
+<body>
+  <nav class="header navbar navbar-dark">
+    <a class="navbar-brand ms-5">Your tasks list</a>
+    <form class="form-inline me-5">
+      <select class="form-select form-select-sm" id="themeSelect">
+        <option value="default">Theme Default</option>
+        <option value="light">Theme Light</option>
+        <option value="dark">Theme Dark</option>
+      </select>
+    </form>
+  </nav>
+  <div class="form-section mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col col-8 mx-auto">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center">Add new task</h5>
+              <form name="addTask">
+                <input type="text" name="title" id="title" class="form-control" placeholder="Task title" />
+                <textarea type="text" name="body" id="body" class="form-control mt-3" placeholder="Task body"
+                  rows="3"></textarea>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <button type="submit" class="btn btn-primary mt-4 me-md-2" name="addBtn">
+                    Add task
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tasks-list-section mt-5">
+    <div class="container">
+      <div class=" text-center mb-3" id="buttonAction">
+        <button class="btn btn-info all-tasks all-task me-5" id="all-task">All Tasks</button>
+        <button class="btn btn-success unfinished-tasks" id="unfinished-tasks">Unfinished
+          Tasks</button>
+      </div>
+      <ul class="list-group mb-5">
+      </ul>
+    </div>
+  </div>
+  <div class="container" id="emtylist">
+    <p class="mt-2 w-100 text-center fw-bold fs-1">
+      Your task list is empty
+    </p>
+  </div>
+  <div class="container d-none" id="completedempty">
+    <p class="mt-2 w-100 text-center fw-bold fs-1">
+      All tasks is completed
+    </p>
+  </div>
+</body>
+
+</html>
